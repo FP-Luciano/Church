@@ -674,7 +674,9 @@ footer {
   justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
+  position: relative;
 }
+
 .footer-logo {
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
@@ -687,6 +689,43 @@ footer {
   color: var(--muted);
   text-align: right;
   line-height: 1.9;
+}
+
+.footer-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-church {
+  font-family: 'Playfair Display', serif;
+  font-size: .9rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--gold);
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.footer-pastors {
+  font-size: .62rem;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+  line-height: 1.9;
+  text-transform: uppercase;
+}
+
+@media (max-width: 960px) {
+  .footer-center {
+    position: static;
+    transform: none;
+    order: -1;
+    width: 100%;
+  }
 }
 
 /* ─── REVEAL ─────────────────────────────────────────────── */
